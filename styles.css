@@ -1,0 +1,65 @@
+body{
+    font-family: Arial;
+    margin:0;
+    background: #f4f4f4;
+}
+.login-container{
+    width: 300px;
+    margin: 100px auto;
+    padding:25px;
+    background: #fff;
+    border-radius: 10px;
+    text-align:center;
+    box-shadow:0 0 10px #ccc;
+
+}
+.login-container input,
+.sidebar input,
+.sidebar select{
+    width:90%;
+    padding:10px;
+    margin:8px 0;
+}
+button{
+    padding:10px 20px;
+    cursor:pointer;
+}
+.navbar{
+    background: #333;
+    padding: 10px;
+    color:white;
+}
+.navbar select,
+.navbar button{
+    margin-right:10px;
+    padding: 7px 10px;
+}
+.layout{
+    display:flex;
+}
+.sidebar{
+    width:250px;
+    padding:20px;
+    background:white;
+    height:100vh;
+}
+.main{
+    flex:1;
+    padding:20px;
+}
+.card{
+    width:30%;
+    background: white;
+    padding:15px;
+    border-radius:8px ;
+    box-shadow: 0 0 8px #ccc;
+    margin:10px;
+    display: inline-block;
+    vertical-align: top;
+
+}
+.card img{
+    width:100%;
+    height:150px;
+    object-fit: cover;
+}
