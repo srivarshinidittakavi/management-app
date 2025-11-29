@@ -1,7 +1,7 @@
-// ✅ Vehicle image provided
+
 const IMAGE_SRC = "https://coding-platform.s3.amazonaws.com/dev/lms/tickets/5e80fcb6-3f8e-480c-945b-30a5359eb40e/JNmYjkVr3WOjsrbu.png";
 
-// ---------------- LOGIN PAGE ----------------
+
 const loginForm = document.getElementById("login-form");
 if (loginForm) {
   loginForm.addEventListener("submit", (e) => {
@@ -18,7 +18,7 @@ if (loginForm) {
   });
 }
 
-// ---------------- ADMIN PAGE ----------------
+
 const fleetForm = document.getElementById("fleet-form");
 const fleetGrid = document.getElementById("fleet-grid");
 
@@ -151,6 +151,6 @@ if (fleetForm && fleetGrid) {
     });
   }
 
-  // Initial render
+ 
   render();
 }
