@@ -1,50 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fleet Management — Admin</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <div class="navbar">
-        <select id="categoryFilter">
-            <option value="">All catergories</option>
-            <option>Auto</option>
-            <option>Car</option>
-            <option>Bus</option>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="brand">Fleet Admin</div>
+    <div class="filters">
+      <label>
+        Category
+        <select id="filter-category">
+          <option value="All">All</option>
+          <option value="Auto">Auto</option>
+          <option value="Car">Car</option>
+          <option value="Truck">Truck</option>
+          <option value="Bus">Bus</option>
         </select>
-        <select id="availabilityFilter">
-            <option value="">All Availability</option>
-            <option>Available</option>
-            <option>Unavailable</option>
-            
+      </label>
+      <label>
+        Availability
+        <select id="filter-availability">
+          <option value="All">All</option>
+          <option value="Available">Available</option>
+          <option value="Unavailable">Unavailable</option>
         </select>
-        <button id="clearFilterBtn">Clear Filter</button>
+      </label>
+      <button id="clear-filters" class="btn">Clear Filter</button>
     </div>
-    <div class="layout">
-        <div class="sidebar">
-            <h3>Add Fleet</h3>
-            <input type="text" id="reg" placeholder="reg no">
-            <select id="category">
-            
-            <option>Auto</option>
-            <option>Car</option>
-            <option>Truck</option>
-            <option>Bus</option>
+  </nav>
 
-        </select>
-        <input type="text" id="driver" placeholder="Driver name">
-        <select id="availabile">
-           
-            <option>Available</option>
-            <option>Unavailable</option>
-        </select>
-        <button id="addFleetBtn">Add Fleet</button>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Add Fleet</h2>
+      <form id="fleet-form">
+        <label>Reg No of Vehicle
+          <input id="regNo" type="text" placeholder="AP09 AB 1234" required/>
+        </label>
 
-        </div>
-        <div class="main" id="fleetContainer"></div>
-    </div>
-    <script src="script.js"></script>
+        <label>Category
+          <select id="category" required>
+            <option value="">Select category</option>
+            <option value="Auto">Auto</option>
+            <option value="Car">Car</option>
+            <option value="Truck">Truck</option>
+            <option value="Bus">Bus</option>
+          </select>
+        </label>
+
+        <label>Driver Name
+          <input id="driver" type="text" placeholder="Driver name" required/>
+        </label>
+
+        <label class="inline">
+          <input id="available" type="checkbox"/>
+          Is Available
+        </label>
+
+        <button type="submit" class="btn primary full">Add Fleet</button>
+      </form>
+    </aside>
+
+    <!-- Main content -->
+    <main>
+      <div id="fleet-grid" class="grid"></div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
